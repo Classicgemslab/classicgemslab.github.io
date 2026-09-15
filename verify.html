@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CGL | Report Verification</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fafafa;
+    color: #222;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 25px;
+    text-align: center;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    border: 1px solid #c9a86a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+header h1 {
+    margin: 15px 0 5px;
+    font-size: 22px;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+header p {
+    margin: 0;
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.report-box {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 45px 35px;
+}
+
+.verified {
+    text-align: center;
+    color: #26734d;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.report-title {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 35px;
+}
+
+.details {
+    border-top: 1px solid #ddd;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.label {
+    color: #777;
+}
+
+.value {
+    font-weight: 500;
+    text-align: right;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin-top: 12px;
+    text-align: center;
+    text-decoration: none;
+    background: #222;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.home {
+    background: white;
+    color: #222;
+    border: 1px solid #222;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+
+    .report-box {
+        padding: 30px 20px;
+    }
+
+    .row {
+        display: block;
+    }
+
+    .value {
+        text-align: left;
+        margin-top: 5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        CGL
+    </div>
+
+    <h1>CLASSIC GEMS</h1>
+
+    <p>GEMOLOGICAL LABORATORY</p>
+
+</header>
+
+
+<div class="container">
+
+    <div class="report-box">
+
+        <div class="verified">
+            ✓ REPORT VERIFIED
+        </div>
+
+        <h2 class="report-title">
+            CGL Diamond Report
+        </h2>
+
+
+        <div class="details">
+
+            <div class="row">
+                <div class="label">Certificate Number</div>
+                <div class="value">CGL-0001</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Description</div>
+                <div class="value">Natural Diamond</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Shape</div>
+                <div class="value">Round Brilliant</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Carat Weight</div>
+                <div class="value">1.00 ct</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Color</div>
+                <div class="value">G</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Clarity</div>
+                <div class="value">VS1</div>
+            </div>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <!-- Replace this PDF later -->
+
+            <a
+                href="certificate-CGL-0001.pdf"
+                target="_blank"
+                class="button">
+                VIEW ORIGINAL PDF
+            </a>
+
+            <a
+                href="certificate-CGL-0001.pdf"
+                download
+                class="button">
+                DOWNLOAD CERTIFICATE
+            </a>
+
+            <a
+                href="index.html"
+                class="button home">
+                ← BACK TO HOME
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    CLASSIC GEMS LABORATORY<br>
+    Diamond Grading • Identification • Reporting
+
+</footer>
+
+</body>
+
+</html>
