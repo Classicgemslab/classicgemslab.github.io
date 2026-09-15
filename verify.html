@@ -32,12 +32,7 @@ header {
     width: 75px;
     height: 75px;
     margin: auto;
-    border: 1px solid #c9a86a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    letter-spacing: 2px;
+    object-fit: contain;
 }
 
 header h1 {
@@ -92,6 +87,7 @@ header p {
     justify-content: space-between;
     padding: 15px 0;
     border-bottom: 1px solid #eee;
+    gap: 20px;
 }
 
 .label {
@@ -126,6 +122,14 @@ header p {
     border: 1px solid #222;
 }
 
+.error {
+    text-align: center;
+    color: #b00020;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 40px 10px;
+}
+
 footer {
     text-align: center;
     padding: 30px;
@@ -158,7 +162,7 @@ footer {
 
 <header>
 
-<img src="cgl-logo.png" class="logo" alt="CGL Logo">
+    <img src="cgl-logo.png" class="logo" alt="CGL Logo">
 
     <h1>CLASSIC GEMS</h1>
 
@@ -169,7 +173,68 @@ footer {
 
 <div class="container">
 
-    <div class="report-box">
+    <div class="report-box" id="reportBox">
+
+        <!-- Certificate details will appear here automatically -->
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    CLASSIC GEMS LABORATORY<br>
+    Diamond Grading • Identification • Reporting
+
+</footer>
+
+
+<!-- CERTIFICATE DATABASE -->
+<script src="certificates.js"></script>
+
+
+<script>
+
+function showReport() {
+
+    const params = new URLSearchParams(window.location.search);
+
+    const reportNumber = params.get("report");
+
+    const reportBox = document.getElementById("reportBox");
+
+
+    if (!reportNumber) {
+
+        reportBox.innerHTML = `
+            <div class="error">
+                REPORT NOT FOUND
+            </div>
+        `;
+
+        return;
+    }
+
+
+    const number = reportNumber.trim().toUpperCase();
+
+    const certificate = certificates[number];
+
+
+    if (!certificate) {
+
+        reportBox.innerHTML = `
+            <div class="error">
+                REPORT NOT FOUND
+            </div>
+        `;
+
+        return;
+    }
+
+
+    reportBox.innerHTML = `
 
         <div class="verified">
             ✓ REPORT VERIFIED
@@ -179,55 +244,76 @@ footer {
             CGL Diamond Report
         </h2>
 
-
         <div class="details">
 
             <div class="row">
                 <div class="label">Certificate Number</div>
-                <div class="value">CGL-0001</div>
+                <div class="value">${number}</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Date</div>
+                <div class="value">${certificate.date}</div>
             </div>
 
             <div class="row">
                 <div class="label">Description</div>
-                <div class="value">Natural Diamond</div>
+                <div class="value">${certificate.description}</div>
             </div>
 
             <div class="row">
-                <div class="label">Shape</div>
-                <div class="value">Round Brilliant</div>
+                <div class="label">Shape & Cutting Style</div>
+                <div class="value">${certificate.shape}</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Measurements</div>
+                <div class="value">${certificate.measurements}</div>
             </div>
 
             <div class="row">
                 <div class="label">Carat Weight</div>
-                <div class="value">1.00 ct</div>
+                <div class="value">${certificate.carat}</div>
             </div>
 
             <div class="row">
                 <div class="label">Color</div>
-                <div class="value">G</div>
+                <div class="value">${certificate.color}</div>
             </div>
 
             <div class="row">
                 <div class="label">Clarity</div>
-                <div class="value">VS1</div>
+                <div class="value">${certificate.clarity}</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Cut</div>
+                <div class="value">${certificate.cut}</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Polish</div>
+                <div class="value">${certificate.polish}</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Fluorescence</div>
+                <div class="value">${certificate.fluorescence}</div>
             </div>
 
         </div>
 
-
         <div class="buttons">
 
-            <!-- Replace this PDF later -->
-
             <a
-                href="certificate-CGL-0001.pdf"
+                href="${certificate.pdf}"
                 target="_blank"
                 class="button">
                 VIEW ORIGINAL PDF
             </a>
 
             <a
-                href="certificate-CGL-0001.pdf"
+                href="${certificate.pdf}"
                 download
                 class="button">
                 DOWNLOAD CERTIFICATE
@@ -241,17 +327,14 @@ footer {
 
         </div>
 
-    </div>
+    `;
 
-</div>
+}
 
 
-<footer>
+showReport();
 
-    CLASSIC GEMS LABORATORY<br>
-    Diamond Grading • Identification • Reporting
-
-</footer>
+</script>
 
 </body>
 
