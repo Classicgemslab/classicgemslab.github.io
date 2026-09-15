@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -32,12 +34,7 @@ header {
     width: 90px;
     height: 90px;
     margin: auto;
-    border: 1px solid #c9a86a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    letter-spacing: 3px;
+    object-fit: contain;
 }
 
 header h1 {
@@ -193,6 +190,7 @@ footer {
 }
 
 </style>
+
 </head>
 
 <body>
@@ -250,7 +248,7 @@ footer {
     <input
         type="text"
         id="certificateNumber"
-        placeholder="Example: CGL-0001"
+        placeholder="Example: CGL-451236"
     >
 
     <button onclick="verifyCertificate()">
@@ -293,28 +291,13 @@ function verifyCertificate() {
         return;
     }
 
-    /*
-       TEMPORARY TEST CERTIFICATE
-
-       We will replace this with your
-       actual certificate database.
-    */
-
-    if (number === "CGL-0001") {
-
-        window.location.href =
-            "verify.html?report=CGL-0001";
-
-    } else {
-
-        result.innerHTML =
-            "<span style='color:#b00020;'>REPORT NOT FOUND</span>";
-
-    }
+    window.location.href =
+        "verify.html?report=" + encodeURIComponent(number);
 
 }
 
 </script>
 
 </body>
+
 </html>
