@@ -1,144 +1,322 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Classic Gems - Diamond Certificate</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-            margin: 0;
-            padding: 40px 20px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .certificate {
-            max-width: 700px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border: 1px solid #ddd;
-        }
+<title>CGL | Classic Gems Laboratory</title>
 
-        h1 {
-            text-align: center;
-            font-size: 28px;
-            letter-spacing: 3px;
-            margin-bottom: 5px;
-        }
+<style>
 
-        .subtitle {
-            text-align: center;
-            color: #777;
-            margin-bottom: 35px;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        .report {
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 25px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fafafa;
+    color: #222;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+/* HEADER */
 
-        td {
-            padding: 12px;
-            border-bottom: 1px solid #eee;
-        }
+header {
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 30px 20px;
+    text-align: center;
+}
 
-        td:first-child {
-            font-weight: bold;
-            width: 45%;
-        }
+.logo {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border: 1px solid #c9a86a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    letter-spacing: 3px;
+}
 
-        .verified {
-            text-align: center;
-            margin-top: 35px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            font-weight: bold;
-        }
+header h1 {
+    margin: 18px 0 0;
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
 
-        .footer {
-            text-align: center;
-            color: #888;
-            font-size: 12px;
-            margin-top: 30px;
-        }
-    </style>
+header p {
+    margin: 8px 0 0;
+    color: #777;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* HERO */
+
+.hero {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 70px 20px 45px;
+}
+
+.hero h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0 0 18px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.tagline {
+    margin-top: 25px;
+    color: #b18a4a;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* PHOTO GALLERY */
+
+.gallery {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    background: #eee;
+}
+
+/* VERIFY */
+
+.verify-section {
+    max-width: 650px;
+    margin: 70px auto;
+    padding: 45px 25px;
+    background: white;
+    border: 1px solid #e1e1e1;
+    text-align: center;
+}
+
+.verify-section h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0 0 12px;
+}
+
+.verify-section p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    text-align: center;
+    outline: none;
+}
+
+input:focus {
+    border-color: #b18a4a;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 16px;
+    background: #222;
+    color: white;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid #e5e5e5;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery img {
+        height: 180px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="certificate">
+<header>
+
+    <div class="logo">
+        CGL
+    </div>
 
     <h1>CLASSIC GEMS</h1>
 
-    <div class="subtitle">
-        DIAMOND GRADING REPORT
+    <p>GEMOLOGICAL LABORATORY</p>
+
+</header>
+
+
+<section class="hero">
+
+    <h2>Confidence in Every Stone</h2>
+
+    <p>
+        Classic Gems Laboratory provides professional diamond
+        grading and identification reports with a focus on
+        accuracy, consistency and transparency.
+    </p>
+
+    <div class="tagline">
+        PRECISION • TRUST • CONFIDENCE
     </div>
 
-    <div class="report">
-        REPORT No. CGL-0001
-    </div>
+</section>
 
-    <table>
-        <tr>
-            <td>Shape & Cutting Style</td>
-            <td>Round Brilliant</td>
-        </tr>
 
-        <tr>
-            <td>Carat Weight</td>
-            <td>1.01 ct</td>
-        </tr>
+<!-- DIAMOND PHOTOS -->
 
-        <tr>
-            <td>Color</td>
-            <td>G</td>
-        </tr>
+<section class="gallery">
 
-        <tr>
-            <td>Clarity</td>
-            <td>VS2</td>
-        </tr>
+    <img src="Diamond1.jpg" alt="Diamond">
+    <img src="diamond2.jpeg" alt="Diamond">
+    <img src="diamond3.jpeg" alt="Diamond">
+    <img src="diamond4.jpeg" alt="Diamond">
 
-        <tr>
-            <td>Cut</td>
-            <td>Excellent</td>
-        </tr>
+</section>
 
-        <tr>
-            <td>Polish</td>
-            <td>Excellent</td>
-        </tr>
 
-        <tr>
-            <td>Symmetry</td>
-            <td>Excellent</td>
-        </tr>
+<!-- REPORT VERIFICATION -->
 
-        <tr>
-            <td>Fluorescence</td>
-            <td>None</td>
-        </tr>
+<section class="verify-section">
 
-        <tr>
-            <td>Measurements</td>
-            <td>6.35 × 6.38 × 3.92 mm</td>
-        </tr>
-    </table>
+    <h2>Verify Your Report</h2>
 
-    <div class="verified">
-        ✓ CERTIFICATE VERIFIED
-    </div>
+    <p>
+        Enter the certificate number shown on your CGL report.
+    </p>
 
-    <div class="footer">
-        This report is issued by Classic Gems Laboratory.
-    </div>
+    <input
+        type="text"
+        id="certificateNumber"
+        placeholder="Example: CGL-0001"
+    >
 
-</div>
+    <button onclick="verifyCertificate()">
+        VERIFY REPORT
+    </button>
+
+    <div id="result"></div>
+
+</section>
+
+
+<footer>
+
+    CLASSIC GEMS LABORATORY<br>
+    Diamond Grading • Identification • Reporting<br><br>
+
+    © 2026 Classic Gems Laboratory. All rights reserved.
+
+</footer>
+
+
+<script>
+
+function verifyCertificate() {
+
+    const number =
+        document.getElementById("certificateNumber")
+        .value
+        .trim()
+        .toUpperCase();
+
+    const result =
+        document.getElementById("result");
+
+    if (number === "") {
+
+        result.innerHTML =
+            "Please enter a certificate number.";
+
+        return;
+    }
+
+    /*
+       TEMPORARY TEST CERTIFICATE
+
+       We will replace this with your
+       actual certificate database.
+    */
+
+    if (number === "CGL-0001") {
+
+        window.location.href =
+            "verify.html?report=CGL-0001";
+
+    } else {
+
+        result.innerHTML =
+            "<span style='color:#b00020;'>REPORT NOT FOUND</span>";
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
