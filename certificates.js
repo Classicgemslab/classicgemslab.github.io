@@ -40,5 +40,5 @@ const certificates = {
         polish: "Excellent",
         fluorescence: "None",
         pdf: "certificates/CGL-452461.pdf" 
-
+       }
 };
