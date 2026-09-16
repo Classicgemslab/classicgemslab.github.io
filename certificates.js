@@ -26,6 +26,19 @@ const certificates = {
         polish: "Excellent",
         fluorescence: "None",
         pdf: "certificates/CGL-451237.pdf"
-    }
+    },
+    
+   "CGL-452461": {
+        date: "September 15, 2026",
+        description: "Natural Diamond",
+        shape: "Round Brilliant",
+        measurements: "8.02 - 8.11 × 4.98 mm",
+        carat: "1.87 Carat",
+        color: "I-J",
+        clarity: "VVS",
+        cut: "Excellent",
+        polish: "Excellent",
+        fluorescence: "None",
+        pdf: "certificates/CGL-452461.pdf" 
 
 };
