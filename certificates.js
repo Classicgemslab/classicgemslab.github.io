@@ -13,7 +13,10 @@ const certificates = {
         fluorescence: "None",
         pdf: "certificates/CGL-451236.pdf"
     }
- "CGL-451237": {
+};
+const certificates = {
+
+    "CGL-451237": {
         date: "September 14, 2026",
         description: "Natural Diamond",
         shape: "Round Brilliant",
@@ -24,6 +27,6 @@ const certificates = {
         cut: "Excellent",
         polish: "Excellent",
         fluorescence: "None",
-        pdf: "certificates/CGL-451237.pdf"
+        pdf: "certificates/CGL-451236.pdf"
     }
 };
